@@ -1,0 +1,175 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+
+main {
+  font-family: [Poppins];
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (min-width:375px)and(max-width:1440px) {
+  .main {
+    flex-direction: column;
+    background-image: url("images/bg-intro-mobile.png");
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width:375)and(max-width: 1440px) {
+  .left,
+  .right {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.main {
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: rgb(240, 109, 109);
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+.left {
+  padding: 2em;
+  color: white;
+  width: 50%;
+}
+
+.left h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.left p {
+  
+  font-weight: bold;
+}
+
+.right {
+  padding: 2em;
+  width: 50%;
+}
+
+.right .try {
+  background-color: rgb(49, 49, 139);
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  box-shadow: 0 6px 10px rgb(0, 0, 0, 0.4); 
+}
+
+.right .details {
+  background-color: white;
+  border-radius: 5px;
+  padding: 12px 20px;
+  box-shadow: 0  6px 10px  rgb(0, 0, 0, 0.4); 
+}
+form {
+  align-content: center;
+}
+.input {
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  resize:vertical;
+  
+}
+
+::placeholder {
+  font-weight: bold;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ending {
+  text-align: center;
+  font-size: small;
+  color:grey;
+  padding: 6px;
+}
+
+.ending .terms {
+  color: red;
+}
+
+
+
+/* active status */
+.input:invalid {
+  border-color:red;
+  background-image: url("static/icon-error.svg");
+  background-size:25px;
+  background-repeat: no-repeat;
+  background-position: right;
+  content: attr(data-error);
+}
+
+
+/*.input:required:focus:invalid {
+  background-image: url("static/icon-error.svg");
+  background-size:25px;
+  background-repeat: no-repeat;
+  background-position: right;
+}*/
+
+
+.input:required:focus:invalid {
+  background-image: url("static/icon-error.svg");
+  background-size:25px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.input:required:invalid [data-error] ::after{
+content: attr(data-error);
+font-size: 0.85em;
+color:red;
+margin:10px 0;
+display:block;
+content: attr(data-error);
+}
+/*.input-container[data-error].input {
+  border-color: red;
+  color:red;
+  background:url("static\icon-error.svg");
+  background-size:25px;
+  background-repeat: no-repeat;
+  
+}
+
+.input-container[data-error] ::after {
+  content: attr(data-error);
+  font-size: 0.85em;
+  color:red;
+ 
+
+  text-align:right;
+  background:url("static\icon-error.svg");
+  background-size:25px;
+  background-repeat: no-repeat;
+  
+}*/
