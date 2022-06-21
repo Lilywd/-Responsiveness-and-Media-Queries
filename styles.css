@@ -89,7 +89,7 @@ form {
   padding: 12px;
   border: 1px solid #ccc;
   resize:vertical;
- 
+  
 }
 
 ::placeholder {
@@ -120,6 +120,7 @@ button {
 
 
 /* active status */
+
 input + span {
   position: relative;
 }
@@ -137,6 +138,4 @@ input:invalid {
 input:invalid + span::before {
   content: '✖';
   color: red;
-  background-image: url ("images\icon-error.svg ");
-  
 }
