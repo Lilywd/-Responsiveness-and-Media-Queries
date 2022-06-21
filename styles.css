@@ -123,12 +123,13 @@ button {
 
 input + span {
   position: relative;
+  
 }
 
 input + span::before {
-  position: absolute;
-  right: -20px;
-  top: 5px;
+ float:right;
+ 
+  
 }
 
 input:invalid {
@@ -136,6 +137,8 @@ input:invalid {
 }
 
 input:invalid + span::before {
-  content: '✖';
+  content: span ;
+  background-image: url("images/icon-error.svg");
+  background-repeat: no-repeat;
   color: red;
 }
