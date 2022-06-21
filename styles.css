@@ -89,7 +89,7 @@ form {
   padding: 12px;
   border: 1px solid #ccc;
   resize:vertical;
-  
+ 
 }
 
 ::placeholder {
@@ -120,56 +120,23 @@ button {
 
 
 /* active status */
-.input:invalid {
-  border-color:red;
-  background-image: url("static/icon-error.svg");
-  background-size:25px;
-  background-repeat: no-repeat;
-  background-position: right;
-  content: attr(data-error);
+input + span {
+  position: relative;
 }
 
-
-/*.input:required:focus:invalid {
-  background-image: url("static/icon-error.svg");
-  background-size:25px;
-  background-repeat: no-repeat;
-  background-position: right;
-}*/
-
-
-.input:required:focus:invalid {
-  background-image: url("static/icon-error.svg");
-  background-size:25px;
-  background-repeat: no-repeat;
-  background-position: right;
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 5px;
 }
-.input:required:invalid [data-error] ::after{
-content: attr(data-error);
-font-size: 0.85em;
-color:red;
-margin:10px 0;
-display:block;
-content: attr(data-error);
+
+input:invalid {
+  border: 2px solid red;
 }
-/*.input-container[data-error].input {
-  border-color: red;
-  color:red;
-  background:url("static\icon-error.svg");
-  background-size:25px;
-  background-repeat: no-repeat;
+
+input:invalid + span::before {
+  content: '✖';
+  color: red;
+  background-image: url ("images\icon-error.svg ");
   
 }
-
-.input-container[data-error] ::after {
-  content: attr(data-error);
-  font-size: 0.85em;
-  color:red;
- 
-
-  text-align:right;
-  background:url("static\icon-error.svg");
-  background-size:25px;
-  background-repeat: no-repeat;
-  
-}*/
