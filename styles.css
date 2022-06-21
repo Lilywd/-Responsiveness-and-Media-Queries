@@ -133,12 +133,15 @@ input + span::before {
 }
 
 input:invalid {
-  border: 2px solid red;
+  border: 1px solid red;
 }
 
 input:invalid + span::before {
   content: span ;
-  background-image: url("images/icon-error.svg");
-  background-repeat: no-repeat;
   color: red;
+}
+
+input:invalid {
+  background: url("images/icon-error.svg") no-repeat 95% 50% ;
+  background-size: 25px;
 }
